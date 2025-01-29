@@ -11,6 +11,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        quaternary: "var(--quaternary)",
+        light: "var(--light)",
+      },
+      backgroundImage: {
+        "page-image":
+          "url('https://res.cloudinary.com/dwvt17wew/image/upload/v1738059554/slide-1_j7hauc.jpg')",
+        breadcrumb:
+          "url('https://res.cloudinary.com/dwvt17wew/image/upload/v1738170573/bg-6_owngoe.jpg')",
       },
     },
   },
