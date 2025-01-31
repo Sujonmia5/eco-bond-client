@@ -25,12 +25,12 @@ export default function RootLayout({
           token: customTheme,
         }}
       >
-        <body className={`antialiased ${open_sans.className}`}>
-          <Providers>
+        <Providers>
+          <body className={`antialiased ${open_sans.className}`}>
             <Toaster position="top-center" reverseOrder={false} />
             {children}
-          </Providers>
-        </body>
+          </body>
+        </Providers>
       </ConfigProvider>
     </html>
   );

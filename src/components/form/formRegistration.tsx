@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useRegisterUserMutation } from "@/redux/api/auth/auth";
 import { useAppSelector } from "@/redux/hook";

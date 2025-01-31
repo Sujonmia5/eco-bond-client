@@ -22,6 +22,8 @@ export default {
           "url('https://res.cloudinary.com/dwvt17wew/image/upload/v1738059554/slide-1_j7hauc.jpg')",
         breadcrumb:
           "url('https://res.cloudinary.com/dwvt17wew/image/upload/v1738170573/bg-6_owngoe.jpg')",
+        "news-feed":
+          "url('https://res.cloudinary.com/dwvt17wew/image/upload/v1738317859/hbg9_deloy1.png')",
       },
     },
   },

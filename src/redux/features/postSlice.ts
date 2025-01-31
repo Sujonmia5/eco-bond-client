@@ -5,50 +5,103 @@ const initialState: TPostsState = {
   posts: [
     {
       _id: "65a123f4e89b1c0012345678",
-      userId: "user_001",
-      content: "Just planted some tomatoes in my backyard!",
-      imageUrl: "https://example.com/images/tomato-plant.jpg",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
       totalComment: 5,
-      comments: [],
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
       totalVote: 20,
       isDeleted: false,
     },
     {
       _id: "65a123f4e89b1c0012345679",
-      userId: "user_002",
-      content: "Does anyone know the best season to grow basil?",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,doloribus. Facilis quod, repellat veniam voluptatum modi expedita dignissimos autem!",
       totalComment: 12,
       totalVote: 35,
-      comments: [],
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Nice post!",
+        },
+      ],
       isDeleted: false,
     },
     {
-      _id: "65a123f4e89b1c0012345680",
-      userId: "user_003",
-      comments: [],
-      imageUrl: "https://example.com/images/sunflower.jpg",
-      totalComment: 3,
-      totalVote: 15,
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
       isDeleted: false,
     },
     {
-      _id: "65a123f4e89b1c0012345681",
-      userId: "user_004",
-      comments: [],
-      content: "Check out my new indoor herb garden setup!",
-      imageUrl: "https://example.com/images/herb-garden.jpg",
-      totalComment: 8,
-      totalVote: 42,
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
       isDeleted: false,
-    },
-    {
-      _id: "65a123f4e89b1c0012345682",
-      userId: "user_005",
-      content: "My lettuce plants didn't survive the winter 😞",
-      totalComment: 6,
-      comments: [],
-      totalVote: 10,
-      isDeleted: true,
     },
   ],
   page: 1,

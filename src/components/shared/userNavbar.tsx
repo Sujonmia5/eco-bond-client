@@ -1,10 +1,14 @@
 "use client";
-import { Avatar, Dropdown, Image, Menu, MenuProps } from "antd";
+import { logout } from "@/redux/features/authSlice";
+import { useAppDispatch } from "@/redux/hook";
+import { Avatar, Button, Dropdown, Image, Menu, MenuProps } from "antd";
 
 import Link from "next/link";
+import { BiLogOut } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
 
 const NavbarForUser = () => {
+  const dispacth = useAppDispatch();
   const menuItems = [
     {
       key: "",
@@ -26,6 +30,17 @@ const NavbarForUser = () => {
 
   const items: MenuProps["items"] = [
     {
+      key: "2",
+      label: (
+        <Link
+          className="flex items-center justify-start gap-x-2"
+          href={"/dashboard"}
+        >
+          <FaUser /> Dashboard
+        </Link>
+      ),
+    },
+    {
       key: "1",
       label: (
         <Link
@@ -37,14 +52,17 @@ const NavbarForUser = () => {
       ),
     },
     {
-      key: "2",
+      key: "3",
       label: (
-        <Link
-          className="flex items-center justify-start gap-x-2"
-          href={"/dashboard"}
+        <Button
+          onClick={() => dispacth(logout())}
+          type="primary"
+          shape="round"
+          icon={<BiLogOut />}
+          size="middle"
         >
-          <FaUser /> Dashboard
-        </Link>
+          Log out
+        </Button>
       ),
     },
   ];

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiFillEdit } from "react-icons/ai";
 import {
   MdOutlineDashboardCustomize,
@@ -6,18 +7,18 @@ import {
 
 export const sideMenuItems = [
   {
-    key: "1",
-    label: "Dashboard",
+    key: "dashboard",
+    label: <Link href={"/dashboard"}>Dashboard</Link>,
     icon: <MdOutlineDashboardCustomize className="size-6" />,
   },
   {
-    key: "2",
-    label: "Profile",
+    key: "my-profile",
+    label: <Link href={"/my-profile"}>Profile</Link>,
     icon: <MdOutlinePersonOutline className="size-6" />,
   },
   {
-    key: "3",
-    label: "Blog Write",
+    key: "blog-write",
+    label: <Link href="/blog-write">Blog Write</Link>,
     icon: <AiFillEdit className="size-6" />,
   },
 ];

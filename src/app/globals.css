@@ -32,3 +32,12 @@
   ):not(.ant-btn-disabled):hover {
   color: #16a34a !important;
 }
+.ant-menu-item-selected {
+  background-color: #16a34a !important;
+  color: white !important;
+}
+
+.ant-menu-item-active {
+  background-color: #16a34a !important;
+  color: white !important;
+}

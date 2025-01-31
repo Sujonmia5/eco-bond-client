@@ -4,10 +4,13 @@ import { Button, Layout, Menu } from "antd";
 import { useState } from "react";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { sideMenuItems } from "@/utils/sideMenuItems";
+import { usePathname } from "next/navigation";
 
 const { Sider } = Layout;
 
 const Sidebar = () => {
+  const pathname = usePathname().split("/");
+  console.log(pathname);
   const [collapsed, setCollapsed] = useState(true);
 
   return (
@@ -57,6 +60,7 @@ const Sidebar = () => {
         <Menu
           theme="dark"
           mode="inline"
+          activeKey={pathname[1]}
           defaultSelectedKeys={["1"]}
           items={sideMenuItems}
         />
