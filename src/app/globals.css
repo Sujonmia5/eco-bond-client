@@ -26,3 +26,9 @@
   font-weight: bold !important;
   @apply !text-green-600;
 }
+
+:where(.css-dev-only-do-not-override-rz3n0c).ant-btn-variant-text:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: #16a34a !important;
+}

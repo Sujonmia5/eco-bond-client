@@ -1,17 +1,46 @@
 "use client";
+import { useRegisterUserMutation } from "@/redux/api/auth/auth";
+import { useAppSelector } from "@/redux/hook";
 import { Form, Input, Button } from "antd";
+import { useRouter } from "next/navigation";
 import { Controller, FieldValues, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const FormRegistration = () => {
+  const router = useRouter();
   const {
     control,
     handleSubmit,
     formState: { errors },
   } = useForm<FieldValues>();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const [registerUser, { isLoading, data, isSuccess }] =
+    useRegisterUserMutation();
+  const userInfo = useAppSelector((state) => state.auth.user);
+
+  const onSubmit = async (data: FieldValues) => {
+    try {
+      const res = await registerUser({
+        name: data.name,
+        email: data.email,
+        password: data.password,
+        contact: data.phone,
+      }).unwrap();
+      if (res.success) {
+        toast.success("Registration successful!");
+        router.push("/news-feed");
+      }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      toast.error("something went wrong");
+    }
   };
+
+  if (userInfo?.name && userInfo?.email && userInfo?.role) {
+    router.push("/news-feed");
+    return;
+  }
+
   return (
     <>
       <Form layout="vertical" onFinish={handleSubmit(onSubmit)}>
@@ -85,9 +114,24 @@ const FormRegistration = () => {
           )}
         </Form.Item>
 
-        <Button type="primary" htmlType="submit" className="w-full">
+        <Button
+          type="primary"
+          loading={isLoading}
+          htmlType="submit"
+          className="w-full"
+        >
           Register
         </Button>
+        <p className="text-center mt-5">
+          Already have an account?{" "}
+          <a
+            href="#"
+            className="text-green-500"
+            onClick={() => router.push("/login")}
+          >
+            Login
+          </a>
+        </p>
       </Form>
     </>
   );

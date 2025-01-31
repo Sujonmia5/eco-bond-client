@@ -1,3 +1,5 @@
+import { TPost } from "./UtilsTypes";
+
 export type TTitleComponent = {
   title: string;
   subtitle: string;
@@ -10,4 +12,12 @@ export type TFAQComponent = {
     answer: string;
   };
   keyNum: number;
+};
+
+export type TChildren = {
+  children: React.ReactNode;
+};
+
+export type TPostCard = {
+  post: TPost;
 };
