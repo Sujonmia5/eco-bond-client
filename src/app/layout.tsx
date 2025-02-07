@@ -1,3 +1,4 @@
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import type { Metadata } from "next";
 import "./globals.css";
 import { ConfigProvider } from "antd";
@@ -28,7 +29,9 @@ export default function RootLayout({
         <Providers>
           <body className={`antialiased ${open_sans.className}`}>
             <Toaster position="top-center" reverseOrder={false} />
+            {/* <Locomotive> */}
             {children}
+            {/* </Locomotive> */}
           </body>
         </Providers>
       </ConfigProvider>

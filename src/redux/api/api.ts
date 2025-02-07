@@ -8,7 +8,7 @@ export const baseAPI = createApi({
     headers: {
       Accept: "application/json",
     },
-    credentials: "include",
+    // credentials: "include",
   }),
   endpoints: () => ({}),
 });

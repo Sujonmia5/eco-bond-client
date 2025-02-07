@@ -2,7 +2,7 @@ import React from "react";
 
 const PublicFooter = () => {
   return (
-    <div>
+    <div className="pb-24">
       <footer className="bg-gray-800 text-white pt-8 pb-6">
         <div className="container mx-auto text-center">
           <p className="text-sm">
