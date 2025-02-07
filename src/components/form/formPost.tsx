@@ -1,26 +1,8 @@
 "use client";
 import { useForm, Controller, FieldValues } from "react-hook-form";
-import {
-  Upload,
-  Button,
-  Form,
-  Input,
-  UploadProps,
-  UploadFile,
-  // GetProp,
-} from "antd";
+import { Upload, Button, Form, Input, UploadProps, UploadFile } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { useState } from "react";
-
-// type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
-
-// const getBase64 = (file: FileType): Promise<string> =>
-//   new Promise((resolve, reject) => {
-//     const reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onload = () => resolve(reader.result as string);
-//     reader.onerror = (error) => reject(error);
-//   });
 
 const PostForm = () => {
   const { control, handleSubmit, reset, watch } = useForm<FieldValues>();

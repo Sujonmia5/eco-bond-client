@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, FieldValues } from "react-hook-form";
 import { Form, Input, Button, message } from "antd";
 
 const ContactForm = () => {
@@ -18,7 +18,7 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: FieldValues) => {
     setLoading(true);
     try {
       // Simulate API call

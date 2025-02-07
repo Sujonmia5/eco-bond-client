@@ -1,5 +1,5 @@
-import { TPost, TPostsState } from "@/interface/UtilsTypes";
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { TPostsState } from "@/interface/UtilsTypes";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: TPostsState = {
   posts: [
@@ -103,6 +103,156 @@ const initialState: TPostsState = {
       totalVote: 20,
       isDeleted: false,
     },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
+    {
+      _id: "65a123f4e89b1c0012345678",
+      userId: {
+        _id: "user_002",
+        name: "John Doe",
+        profileImage:
+          "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      },
+      content: "Just planted some tomatoes in my backyard! ",
+      imageUrl: "https://www.akamai.com/site/im-demo/perceptual-standard.jpg",
+      totalComment: 5,
+      comments: [
+        {
+          _id: "65a123f4e89b1c0012345680",
+          userId: {
+            _id: "user_003",
+            name: "Jane Doe",
+            profileImage: "https://example.com/images/user-profile.jpg",
+          },
+          comment: "Love the tomatoes!",
+        },
+      ],
+      totalVote: 20,
+      isDeleted: false,
+    },
   ],
   page: 1,
   hasMore: true,
@@ -119,24 +269,6 @@ const postsSlice = createSlice({
       state.hasMore = true;
     },
   },
-  //   extraReducers: (builder) => {
-  //     builder
-  //       .addCase(fetchPosts.pending, (state) => {
-  //         state.loading = true;
-  //       })
-  //       .addCase(
-  //         fetchPosts.fulfilled,
-  //         (state, action: PayloadAction<TPost[]>) => {
-  //           state.posts = [...state.posts, ...action.payload];
-  //           state.page += 1;
-  //           state.hasMore = action.payload.length === 10;
-  //           state.loading = false;
-  //         }
-  //       )
-  //       .addCase(fetchPosts.rejected, (state) => {
-  //         state.loading = false;
-  //       });
-  //   },
 });
 
 export const { resetPosts } = postsSlice.actions;

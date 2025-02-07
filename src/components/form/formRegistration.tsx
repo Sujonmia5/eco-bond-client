@@ -31,7 +31,6 @@ const FormRegistration = () => {
         toast.success("Registration successful!");
         router.push("/news-feed");
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("something went wrong");
     }

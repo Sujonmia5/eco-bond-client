@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseAPI = createApi({
   reducerPath: "baseapi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api/v1",
+    baseUrl: "https://ecobond-server.vercel.app/api/v1",
     headers: {
       Accept: "application/json",
     },

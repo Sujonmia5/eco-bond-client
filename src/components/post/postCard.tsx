@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { votePost, addComment } from "../store/postSlice";
+
 import { FaRegThumbsUp, FaComment } from "react-icons/fa";
 import { TPostCard } from "@/interface/PropsTypes";
 import Image from "next/image";
@@ -13,7 +13,6 @@ const PostCard = ({ post }: TPostCard) => {
   const [showReplyInput, setShowReplyInput] = useState(false);
   const [commentText, setCommentText] = useState("");
   const [replyComment, setReplyComment] = useState("");
-  //   const dispatch = useDispatch();
 
   const handleVote = () => {
     // dispatch(votePost(post.id));
@@ -21,12 +20,10 @@ const PostCard = ({ post }: TPostCard) => {
 
   const handleCommentSubmit = () => {
     if (commentText.trim()) {
-      //   dispatch(addComment({ postId: post.id, comment: commentText }));
       setCommentText("");
       setShowCommentInput(false);
     }
   };
-  // console.log(post?.content.slice(0, 200).length);
 
   return (
     <Card className="bg-white h-fit  shadow  rounded-md mb-4">
@@ -60,8 +57,8 @@ const PostCard = ({ post }: TPostCard) => {
         <div className="mt-2">
           {post.content && (
             <p className="text-gray-800 text-justify text-xl">
-              {readMore ? post.content : post.content.slice(0, 300)}
-              {post.content.length > 300 && (
+              {readMore ? post?.content : post?.content.slice(0, 300)}
+              {post?.content?.length > 300 && (
                 <span
                   onClick={() => setReadMore((prev) => !prev)}
                   className="ml-2 text-base font-medium hover:text-green-500 text-blue-500 cursor-pointer"

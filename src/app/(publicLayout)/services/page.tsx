@@ -6,7 +6,7 @@ import Title from "@/components/ui/title";
 const Service = () => {
   const blogPosts = [
     {
-      id: 1,
+      _id: 1,
       imageSrc:
         "https://img.freepik.com/premium-photo/black-beauty-bird-paradise-dark-background_636537-20712.jpg", // Replace with your image paths
       date: "April 21, 2020",
@@ -16,7 +16,7 @@ const Service = () => {
       link: "/blog/choosing-plants", // Replace with your actual links
     },
     {
-      id: 2,
+      _id: 2,
       imageSrc:
         "https://img.freepik.com/premium-photo/black-beauty-bird-paradise-dark-background_636537-20712.jpg", // Replace with your image paths
       date: "April 21, 2020",
@@ -26,7 +26,7 @@ const Service = () => {
       link: "/blog/choosing-plants", // Replace with your actual links
     },
     {
-      id: 3,
+      _id: 3,
       imageSrc:
         "https://img.freepik.com/premium-photo/black-beauty-bird-paradise-dark-background_636537-20712.jpg", // Replace with your image paths
       date: "April 21, 2020",
@@ -50,8 +50,8 @@ const Service = () => {
           <Row gutter={[16, 16]}>
             {" "}
             {/* Use Ant Design Row for grid layout */}
-            {blogPosts.map((post, index) => (
-              <ServiceCard post={post} key={index} />
+            {blogPosts.map((blog, index) => (
+              <ServiceCard blog={blog} key={index} />
             ))}
           </Row>
         </div>
